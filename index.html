@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wrights by the sea - survey</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Wrights by the sea - survey</h2>
+    <div class="form-group">
+        <label for="comment">What feedback would you like to give</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+    <div class="checkbox">
+        <label for="recommend">Would you recommend this hotel to others?</label>
+        <label><input type="checkbox" name="remember" id="recommend"> Yes</label>
+    </div>
+    <button onclick="submit_results()" type="submit" class="btn btn-default">Submit</button>
+</div>
+<script>
+    function submit_results() {
+        if (document.getElementById('recommend').checked) {
+            window.location = "https://goo.gl/Wq2EAK"
+        } else {
+            window.location = 'thank_you.html'
+        }
+    }
+</script>
+</body>
+</html>
